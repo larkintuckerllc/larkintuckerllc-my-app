@@ -11,6 +11,6 @@ resource "heroku_build" "larkintuckerllc-my-app_build" {
   app = heroku_app.larkintuckerllc-my-app.id
 
   source = {
-    path = "."
+    path = "./app"
   }
 }
