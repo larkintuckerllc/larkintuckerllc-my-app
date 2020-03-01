@@ -14,3 +14,7 @@ resource "heroku_build" "larkintuckerllc-my-app_build" {
     path = "./app"
   }
 }
+
+output "web_url" {
+  value = heroku_app.larkintuckerllc-my-app.web_url 
+}
