@@ -12,13 +12,13 @@ provider "heroku" {
   version = "~> 2.0"
 }
 
-resource "heroku_app" "larkintuckerllc-my-app" {
+resource "heroku_app" "this" {
   name   = "larkintuckerllc-my-app"
   region = "us"
 }
 
-resource "heroku_build" "larkintuckerllc-my-app_build" {
-  app = heroku_app.larkintuckerllc-my-app.id
+resource "heroku_build" "this" {
+  app = heroku_app.this.id
 
   source = {
     path = "./app"
@@ -26,5 +26,5 @@ resource "heroku_build" "larkintuckerllc-my-app_build" {
 }
 
 output "web_url" {
-  value = heroku_app.larkintuckerllc-my-app.web_url 
+  value = heroku_app.this.web_url 
 }
