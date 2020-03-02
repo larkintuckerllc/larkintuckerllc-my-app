@@ -2,5 +2,7 @@ language: generic
 install:
     - curl https://releases.hashicorp.com/terraform/0.12.21/terraform_0.12.21_linux_amd64.zip > install.zip
     - unzip install.zip
-    - ./terraform --version    
+    - bash scripts/create-config
+    - cat ~/.terrformrc
 script: echo "script"
+.terraformrc
