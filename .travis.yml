@@ -4,5 +4,6 @@ install:
     - unzip install.zip
     - bash scripts/create-config
     - cat ~/.terrformrc
+    - echo "what"
 script: echo "script"
 .terraformrc
