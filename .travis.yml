@@ -1,4 +1,6 @@
-language: node_js
-node_js: lts/*
-install: true
+language: generic
+install:
+    - curl https://releases.hashicorp.com/terraform/0.12.21/terraform_0.12.21_linux_amd64.zip > install.zip
+    - unzip install.zip
+    - ./terraform --version    
 script: echo "script"
