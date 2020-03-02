@@ -4,4 +4,4 @@ install:
     - unzip install.zip
     - bash scripts/create-config
     - ./terraform init
-script: terraform apply -auto-approve
+script: ./terraform apply -auto-approve
