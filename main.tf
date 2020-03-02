@@ -23,6 +23,10 @@ resource "heroku_build" "this" {
   source = {
     path = "./app"
   }
+
+  provisioner "local-exec" {
+    command = "bash ./scripts/health-check ${heroku_app.this.web_url}"
+  }
 }
 
 output "web_url" {
