@@ -1,3 +1,13 @@
+terraform {
+  backend "remote" {
+    organization = "larkin_tucker_llc"
+
+    workspaces {
+      name = "larkintuckerllc-my-app"
+    }
+  }
+}
+
 provider "heroku" {
   version = "~> 2.0"
 }
