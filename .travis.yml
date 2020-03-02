@@ -3,6 +3,5 @@ install:
     - curl https://releases.hashicorp.com/terraform/0.12.21/terraform_0.12.21_linux_amd64.zip > install.zip
     - unzip install.zip
     - bash scripts/create-config
-    - cat ~/.terrformrc
-    - echo "what"
+    - cat ~/.terraformrc
 script: echo "script"
