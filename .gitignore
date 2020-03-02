@@ -2,3 +2,4 @@
 terraform.tfstate
 terraform.tfstate.backup
 app/node_modules
+app/.env

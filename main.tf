@@ -17,9 +17,14 @@ resource "heroku_app" "this" {
   region = "us"
 }
 
-resource "heroku_build" "this" {
+resource "heroku_addon" "postgres" {
   app = heroku_app.this.id
+  plan = "heroku-postgresql:hobby-dev"
+}
 
+resource "heroku_build" "this" {
+  depends_on = [heroku_addon.postgres]
+  app = heroku_app.this.id
   source = {
     path = "./app"
   }
